@@ -32,16 +32,65 @@ public class Cliente {
           apellidoCliente = "";
 
     }
-    public void listaClientes(){
-        System.out.println("Nombre: "+ nombreCliente);
-        System.out.println("Apellido: "+ apellidoCliente);
-        System.out.println("Cedula: "+ cedulaCliente);
-        System.out.println("Sexo: "+ sexoCliente);
-        System.out.println("Ubicacion: "+ ubicacionCliente);
-    }
+
     public void suscribirse(Suscripcion suscripcion){
         System.out.println(nombreCliente+ " " + apellidoCliente + " adquirió una suscripción "+ suscripcion.tipo);
         System.out.println("________________________");
 
+    }
+    //Getters
+
+    public String getNombreCliente() {
+        return nombreCliente;
+    }
+
+    public String getApellidoCliente() {
+        return apellidoCliente;
+    }
+
+    public String getCedulaCliente() {
+        return cedulaCliente;
+    }
+
+    public String getSexoCliente() {
+        return sexoCliente;
+    }
+
+    public String getUbicacionCliente() {
+        return ubicacionCliente;
+    }
+    //Setters
+
+    public void setNombreCliente(String nombreCliente) {
+        this.nombreCliente = nombreCliente;
+    }
+
+    public void setApellidoCliente(String apellidoCliente) {
+        this.apellidoCliente = apellidoCliente;
+    }
+
+    public void setCedulaCliente(String cedulaCliente) {
+        this.cedulaCliente = cedulaCliente;
+    }
+
+    public void setSexoCliente(String sexoCliente) {
+        this.sexoCliente = sexoCliente;
+    }
+
+    public void setUbicacionCliente(String ubicacionCliente) {
+        this.ubicacionCliente = ubicacionCliente;
+    }
+    //equals
+    public boolean equals(Cliente clienteComparar){
+        return nombreCliente.equals(clienteComparar.nombreCliente) &&
+                apellidoCliente.equals(clienteComparar.apellidoCliente) &&
+                cedulaCliente.equals(clienteComparar.cedulaCliente) &&
+                sexoCliente.equals(clienteComparar.sexoCliente) &&
+                ubicacionCliente.equals(clienteComparar.ubicacionCliente);
+    }
+    //toString
+    public String toString(){
+        return "Nombre: " + nombreCliente +"\nApellido: " + apellidoCliente + "\nCedula: " + cedulaCliente +
+                "\nSexo: " + sexoCliente + "\nUbicacion: " + ubicacionCliente + "\n";
     }
 }

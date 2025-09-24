@@ -15,19 +15,26 @@ public class Main {
 
         Cliente cliente03 = new Cliente();
 
-        //cliente01.listaClientes();
+        //cliente01.setNombreCliente("Selena");
+
+        //System.out.println(cliente01.getSexoCliente());
+
+        //System.out.println(cliente01);
 
         //Suscripciones
 
         Suscripcion suscriptor01 = new Suscripcion("Basica",5000, 1);
         Suscripcion suscriptor02 = new Suscripcion("Premium", 7500,4 );
 
-        //suscriptor01.listaSuscriptores();
+
+        //System.out.println(suscriptor01);
 
         //Union Cliente-Suscripcion
 
         cliente01.suscribirse(suscriptor01);
+
         cliente02.suscribirse(suscriptor02);
+
         cliente03.suscribirse(new Suscripcion("Familiar",12000,6));
 
         //Prueba
@@ -37,6 +44,12 @@ public class Main {
 
         //cliente04.suscribirse(suscriptor04);
 
+        if (cliente01.equals(cliente02)){
+                System.out.println("Son el mismo cliente");
+        }else {
+            System.out.println("Son personas distintas");
+
+        }
 
     }
 }

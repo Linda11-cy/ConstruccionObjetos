@@ -11,12 +11,41 @@ public class Suscripcion {
         costo = costoObjeto;
         periodicidad = periodicidadObjeto;
     }
-    public void listaSuscriptores(){
-        System.out.println("Tipo: "+ tipo);
-        System.out.println("Costo: "+ costo);
-        System.out.println("Periodicidad: "+ periodicidad );
-
+    //Getters
+    public String getTipo() {
+        return tipo;
     }
 
+    public int getCosto() {
+        return costo;
+    }
+
+    public int getPeriodicidad() {
+        return periodicidad;
+    }
+
+    //Setters
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public void setCosto(int costo) {
+        this.costo = costo;
+    }
+
+    public void setPeriodicidad(int periodicidad) {
+        this.periodicidad = periodicidad;
+    }
+
+    //equals
+    public boolean equals(Suscripcion suscripcionComparar){
+        return tipo.equals(suscripcionComparar.tipo) &&
+                costo == suscripcionComparar.costo &&
+                periodicidad == suscripcionComparar.periodicidad ;
+    }
+    //toString
+    public String toString(){
+        return "Tipo: " + tipo + "\nCosto: " + costo + "\nTotal Meses: " + periodicidad + "\n";
+    }
 
 }
